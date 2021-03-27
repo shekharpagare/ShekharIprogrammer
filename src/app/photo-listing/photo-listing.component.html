@@ -1,0 +1,41 @@
+<div class="h tbp">
+    <h5 class="px20" style="left:30%">Photo Listing</h5>
+</div>
+<div class="h" style="padding: 20px;height:35%;display: inline-block;overflow-y: auto;width: 96%">
+  <div class="vh" *ngFor="let key of photoList;let i=index;" style="margin-bottom: 15px;">
+      <div class="vh lrm" style="height:200px;width:150px;border:1px solid;">
+        <div class="h tp">
+            <img style="height: 40px;width:100px"  src="{{key.url}}">
+        </div>
+        <div class="h" style="padding: 10px;height: 100px;overflow: hidden;display: flex;flex-direction: column;align-items: center">
+          <h5 class="e px12 mw" title="{{key.title}}">{{key.title}}</h5>
+          <h5 class="e px12 tp mw">{{key.id}}</h5>
+          <h5 class="e tp mw" title={{key.url}}>{{key.url}}</h5>
+        </div>
+        <div class="h centerLayout" >
+          <button class="button" style="border-radius: 5px;"  [style.background-color]="key.selected ? '#f4c2c2' : '#d7f2f3'" (click)="addPhotoList(key,key.id)">{{key.selected ? 'Remove' : 'Compare'}}</button>
+        </div>
+      </div> 
+  </div>
+</div>
+<div class="h" style="width: 950px;overflow-y: auto;height: 55%;padding: 20px;margin-top: 10px;">
+      <div class="h tbp" style="border: 1px solid">
+          <h5 class="px20 " style="left:30%">COMPARISON TABLE</h5>
+      </div>
+      <table style="width:100%;  border-collapse: collapse;">
+          <tr class="tp">
+            <th class=""></th>
+            <th class="">ID</th>
+            <th>URL</th> 
+            <th>THUMBNAIL_URL</th> 
+            <th>TITLE</th>
+          </tr>
+          <tr *ngFor="let key of selectedPhoto;let j = index">
+            <td style="width: 55px;"><img style="height: 20px;width: 40px" src="{{key.url}}"></td>
+            <td >{{key.id}}</td>
+            <td >{{key.url}}</td>
+            <td >{{key.thumbnailUrl}}</td>
+            <td>{{key.title}}</td>
+          </tr>
+        </table>
+</div>

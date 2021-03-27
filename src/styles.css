@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+body,html{font-family:ProductRegular;margin:0px;height:100%;color: #000000;background:white;min-width: 720px;min-height: 600px;overflow-x: hidden;overflow-y:hidden;}
+[contenteditable=true]:empty:before{content: attr(placeholder);color:#c1c1c1;}
+::-webkit-scrollbar{width: 5px;height:5px;}
+::-webkit-scrollbar-thumb { background: rgb(56, 50, 50); }
+.day ::-webkit-scrollbar-thumb{background-color: rgba(255,255,255,0.66);}
+h1,h2,h3,h4,h5,h6,svg,div:focus{outline:none;}
+h1,h2,h3,h4,h5,h6,p{float:left;margin:0px;padding:0px;}
+div,h1,h2,h3,h4,h5,h6,p{position:relative;box-sizing: border-box;}
+::-webkit-scrollbar{width:5px;height:5px;}
+div[hidden] {display: none !important;}
+.h{float:left;width:100%;height:auto;}
+.v{float:left;width:auto;height:100%;}
+.vh{float:left;height:auto;width:auto;}
+.lp{padding-left:10px}
+.tp{padding-top:10px}
+.rp{padding-right:10px}
+.lrp{padding:0px 10px 0px 10px}
+.tbp{padding:10px 0px 10px 0px}
+.lm{margin-left : 10px}
+.lrm{margin: 0px 10px 0px 10px}
+h5{display: inline-block;margin: 0px}
+.px20{font-size: 20px;}
+.px12{font-size: 12px;}
+.px15{font-size: 15px;}
+.bBrd{border-width:0px 0px 1px 0px;}
+.mw{font-weight: 500}
+.brd{border-style:solid;}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button {
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+.centerLayout{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+.e{overflow:hidden;text-overflow:ellipsis;direction:ltr;max-width:100%;white-space:nowrap;}
+
+
+  
